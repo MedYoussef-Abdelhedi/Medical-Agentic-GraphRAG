@@ -1,0 +1,26 @@
+﻿# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local data and generated results
+**/data/
+**/reports/
+*.npy
+*.npz
+*.zip
+
+# Duplicate scripts and backups
+**/etapes/
+*_backup.py
+
+# Editor and system
+.vscode/
+.DS_Store
+Thumbs.db

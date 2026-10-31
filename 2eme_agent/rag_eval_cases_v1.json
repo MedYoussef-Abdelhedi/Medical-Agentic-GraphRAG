@@ -1,0 +1,48 @@
+{
+  "dataset_name": "MedQuAD NIDDK - prototype response evaluation",
+  "version": "1.0",
+  "review_status": "candidate_annotations_not_independently_validated",
+  "notes": "Answerable references are concise summaries of historical MedQuAD source text, not up-to-date clinical guidelines. Unsupported probes test abstention and are not used for RAGAS context metrics.",
+  "examples": [
+    {
+      "id": "A01",
+      "type": "answerable",
+      "question": "What symptoms can acromegaly cause?",
+      "reference": "Acromegaly can cause enlargement of the hands and feet, facial changes, joint pain, thick oily skin, excessive sweating, fatigue, headaches, sleep apnea, and impaired vision.",
+      "reference_document_id": 1
+    },
+    {
+      "id": "U01",
+      "type": "unsupported_current",
+      "question": "What do the 2026 clinical guidelines recommend for acromegaly?",
+      "expected_behavior": "Explicitly state that 2026 clinical guidelines are not established by the historical retrieved excerpts; avoid claiming historical recommendations are current."
+    },
+    {
+      "id": "A02",
+      "type": "answerable",
+      "question": "What causes acromegaly, and can tumors outside the pituitary be involved?",
+      "reference": "Acromegaly results from prolonged excess growth hormone, usually caused by a benign pituitary adenoma. Rarely, tumors elsewhere can cause the condition by secreting growth hormone or growth-hormone-releasing hormone.",
+      "reference_document_id": 2
+    },
+    {
+      "id": "A03",
+      "type": "answerable",
+      "question": "What signs can indicate Graves' disease?",
+      "reference": "Graves' disease can cause nervousness, fatigue, heat intolerance, tremors, rapid heartbeat, frequent bowel movements, weight loss and goiter. Eye involvement can cause protruding eyes.",
+      "reference_document_id": 27
+    },
+    {
+      "id": "U02",
+      "type": "unsupported_current",
+      "question": "Which new treatment was proven best for Graves' disease in 2026 trials?",
+      "expected_behavior": "Say that the supplied MedQuAD excerpts do not verify clinical trial results from 2026; do not invent a study or compare trial efficacy."
+    },
+    {
+      "id": "A04",
+      "type": "answerable",
+      "question": "What symptoms can occur in adrenal insufficiency?",
+      "reference": "Common symptoms of adrenal insufficiency include chronic fatigue, muscle weakness, loss of appetite, weight loss and abdominal pain; nausea, low blood pressure and dizziness may also occur.",
+      "reference_document_id": 9
+    }
+  ]
+}

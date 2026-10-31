@@ -1,0 +1,11 @@
+{
+  "name": "GraphRAG vs Vector RAG - pilot paired questions",
+  "status": "pilot_not_independent_medical_benchmark",
+  "purpose": "Compare execution, citations and latency on exactly the same general symptom questions. Human adjudication needed for correctness and coverage.",
+  "examples": [
+    {"id": "A_FR", "question": "Quels sont les symptômes de l'acromégalie ?", "disease": "Acromegaly", "category": "supported"},
+    {"id": "I_EN", "question": "What are the symptoms of adrenal insufficiency?", "disease": "Adrenal insufficiency", "category": "supported"},
+    {"id": "A_EN", "question": "Which signs and symptoms are associated with acromegaly?", "disease": "Acromegaly", "category": "supported"},
+    {"id": "I_FR", "question": "Quels sont les symptômes de l'insuffisance surrénalienne ?", "disease": "Adrenal insufficiency", "category": "supported"}
+  ]
+}
