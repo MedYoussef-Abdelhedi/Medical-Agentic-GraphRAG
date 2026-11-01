@@ -17,7 +17,7 @@ GRAPH = [{"candidate_id": "C001", "disease": "Acromegaly", "symptom": "Headaches
 
 class ComparisonTests(unittest.TestCase):
     def test_benchmark_cases(self):
-        examples = load_benchmark(Path(__file__).parent / "benchmark_questions_v1.json")
+        examples = load_benchmark(Path(__file__).resolve().parents[1] / "src" / "medical_graphrag" / "benchmark_questions_v1.json")
         self.assertEqual(len(examples), 4)
 
     def test_duplicate_questions_rejected(self):

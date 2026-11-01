@@ -14,7 +14,7 @@ from agent_graphrag_mcp_v3 import validate_tool_data
 
 
 class FakeHybrid:
-    BASE = __import__('pathlib').Path(__file__).parent
+    BASE = __import__('pathlib').Path(__file__).resolve().parents[1] / 'src' / 'medical_graphrag'
     DATA = BASE / 'data'
 
     def __init__(self):
