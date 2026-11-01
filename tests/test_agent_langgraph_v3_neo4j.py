@@ -6,7 +6,7 @@ import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from agent_langgraph_v3_neo4j import (
+from medical_graphrag.agents.agent_langgraph_v3_neo4j import (
     Q_LABELS,
     Q_NODES,
     Q_RELS,

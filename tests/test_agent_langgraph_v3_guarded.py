@@ -2,7 +2,7 @@
 import json
 import unittest
 from types import SimpleNamespace
-from agent_langgraph_v3_guarded import classify_question, preflight_block, validate_execution
+from medical_graphrag.agents.agent_langgraph_v3_guarded import classify_question, preflight_block, validate_execution
 
 
 def tool(name, content):

@@ -51,7 +51,13 @@ The 14 pilot graph claims are linked to source passages; they have **not** been 
 ```text
 Medical-Agentic-GraphRAG/
 ├── src/
-│   └── medical_graphrag/    # Agents, retrieval, Neo4j and MCP modules
+└── medical_graphrag/
+    ├── agents/
+    ├── retrieval/
+    ├── graph/
+    ├── mcp_tools/
+    ├── ingestion/
+    └── evaluation/    
 ├── tests/                  # Automated and regression tests
 ├── .env.example            # Environment variable template, without secrets
 ├── .gitignore

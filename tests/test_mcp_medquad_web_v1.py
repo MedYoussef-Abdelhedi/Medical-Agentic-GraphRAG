@@ -5,9 +5,9 @@ import types
 import unittest
 from urllib.parse import parse_qs, urlparse
 from unittest.mock import patch
-from mcp_medquad_web_service_v1 import parse_pubmed_xml, search_pubmed_guidelines
-from agent_graphrag_mcp_web_v3 import needs_live_guidelines, verified_pubmed_articles, web_synthesize
-from mcp_medquad_web_client_v3 import EXPECTED_WEB_TOOLS
+from medical_graphrag.mcp_tools.mcp_medquad_web_service_v1 import parse_pubmed_xml, search_pubmed_guidelines
+from medical_graphrag.agents.agent_graphrag_mcp_web_v3 import needs_live_guidelines, verified_pubmed_articles, web_synthesize
+from medical_graphrag.mcp_tools.mcp_medquad_web_client_v3 import EXPECTED_WEB_TOOLS
 
 XML = b'''<?xml version="1.0" encoding="utf-8"?><PubmedArticleSet>
 <PubmedArticle><MedlineCitation><PMID>123456</PMID><Article>

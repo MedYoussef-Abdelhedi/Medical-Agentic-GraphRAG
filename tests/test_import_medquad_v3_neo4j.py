@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from import_medquad_v3_neo4j import (
+from medical_graphrag.graph.import_medquad_v3_neo4j import (
     CONSTRAINTS, READ_COUNTS, WRITE_CHUNKS, WRITE_DOCUMENTS, WRITE_SOURCES,
     READ_PROVENANCE_SOURCES, READ_PROVENANCE_DOCUMENTS, READ_PROVENANCE_CHUNKS,
     batches, import_graph, load_payload, make_source_key, verify,

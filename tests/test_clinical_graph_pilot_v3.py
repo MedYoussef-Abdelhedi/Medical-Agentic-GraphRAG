@@ -8,7 +8,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from tempfile import TemporaryDirectory
 
-import clinical_graph_pilot_v3 as cg
+from medical_graphrag.graph import clinical_graph_pilot_v3 as cg
 
 
 def mock_payload():

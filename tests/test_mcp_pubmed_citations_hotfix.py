@@ -2,7 +2,7 @@
 import types
 import unittest
 
-from agent_graphrag_mcp_web_v3 import (
+from medical_graphrag.agents.agent_graphrag_mcp_web_v3 import (
     directly_relevant_articles,
     normalize_pmid_citations,
     verified_pubmed_articles,
