@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 
-from compare_vector_graphrag_v3 import (
+from medical_graphrag.evaluation.compare_vector_graphrag_v3 import (
     MODES, build_evidence, build_prompt, check_citations, export_review_csv,
     load_benchmark, summarize, verify_questions,
 )

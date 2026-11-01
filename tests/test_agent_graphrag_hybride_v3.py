@@ -3,7 +3,7 @@ import hashlib
 import importlib.util
 import unittest
 
-from agent_graphrag_hybride_v3 import (
+from medical_graphrag.agents.agent_graphrag_hybride_v3 import (
     EXPECTED_CORPUS_SHA256,
     QUERY_GRAPH_EVIDENCE,
     build_workflow,
@@ -13,7 +13,7 @@ from agent_graphrag_hybride_v3 import (
     validate_answer,
     validate_graph_rows,
 )
-from agent_langgraph_v3_guarded import preflight_block
+from medical_graphrag.agents.agent_langgraph_v3_guarded import preflight_block
 
 
 class FakeDriver:

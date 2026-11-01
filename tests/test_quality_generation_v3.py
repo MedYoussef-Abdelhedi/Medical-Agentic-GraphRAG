@@ -1,7 +1,7 @@
 """Offline tests; no network, no Groq and no Neo4j required."""
 import unittest
 from types import SimpleNamespace
-from quality_generation_v3 import (
+from medical_graphrag.evaluation.quality_generation_v3 import (
     check_response_completeness, generate_quality_response, IncompleteResponseError, SYSTEM,
 )
 

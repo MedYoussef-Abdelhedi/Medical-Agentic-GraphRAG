@@ -1,7 +1,7 @@
 """Unit tests using standard library unittest; no downloads or real embeddings."""
 import unittest
 import numpy as np
-from evaluate_retrieval import get_gold_ids, first_gold_rank, metric_summary, evaluate_version
+from medical_graphrag.evaluation.evaluate_retrieval import get_gold_ids, first_gold_rank, metric_summary, evaluate_version
 
 class RetrievalBenchmarkTests(unittest.TestCase):
     def setUp(self):
@@ -29,7 +29,7 @@ class RetrievalBenchmarkTests(unittest.TestCase):
         self.assertAlmostEqual(x['AnchorMRR@5'],(1+.5+1/3)/4)
 
     def test_unsupported_probe_excluded(self):
-        from evaluate_retrieval import MAX_K
+        from medical_graphrag.evaluation.evaluate_retrieval import MAX_K
         examples = [
             {"id":"P", "type":"answerable", "domain":"test", "query":"question", "reference_document_id":5,"reference_evidence_phrase":"A common symptom is thirst"},
             {"id":"N", "type":"unsupported_probe", "domain":"unsupported", "query":"secret record"},

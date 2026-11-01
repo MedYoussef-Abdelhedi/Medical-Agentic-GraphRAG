@@ -8,7 +8,7 @@ from unittest.mock import patch
 
 import numpy as np
 
-from agent_langgraph_v3 import MODEL, load_verified_index
+from medical_graphrag.agents.agent_langgraph_v3 import MODEL, load_verified_index
 
 
 class V3IntegrityTests(unittest.TestCase):

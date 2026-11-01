@@ -8,9 +8,9 @@ import unittest
 from unittest.mock import patch
 
 import numpy as np
-import mcp_medquad_service_v3 as service
-from mcp_medquad_client_v3 import extract_structured, EXPECTED_TOOLS
-from agent_graphrag_mcp_v3 import validate_tool_data
+from medical_graphrag.mcp_tools import mcp_medquad_service_v3 as service
+from medical_graphrag.mcp_tools.mcp_medquad_client_v3 import extract_structured, EXPECTED_TOOLS
+from medical_graphrag.agents.agent_graphrag_mcp_v3 import validate_tool_data
 
 
 class FakeHybrid:
@@ -197,7 +197,7 @@ import importlib.util
 class MCP2InProcessTests(unittest.IsolatedAsyncioTestCase):
     async def test_protocol_list_and_stats(self):
         from mcp import Client
-        import mcp_medquad_server_v3 as server
+        from medical_graphrag.mcp_tools import mcp_medquad_server_v3 as server
         with patch.object(server, 'corpus_stats', return_value={
             'status': 'ok', 'documents': 200, 'chunks': 750, 'index_version': 'V3'
         }):

@@ -1,27 +1,29 @@
-"""Lanceur du prototype, a executer depuis la racine du depot."""
+"""Run an Agentic GraphRAG workflow from the repository root."""
 from __future__ import annotations
+
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-CORE = ROOT / "src" / "medical_graphrag"
+SRC = ROOT / "src"
+CORE = SRC / "medical_graphrag"
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Agentic GraphRAG medical")
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Medical Agentic GraphRAG")
     parser.add_argument("--mode", choices=("web", "mcp", "hybrid"), default="web")
     args, rest = parser.parse_known_args()
-    names = {
-        "web": "agent_graphrag_mcp_web_v3.py",
-        "mcp": "agent_graphrag_mcp_v3.py",
-        "hybrid": "agent_graphrag_hybride_v3_quality.py",
+    modules = {
+        "web": "medical_graphrag.agents.agent_graphrag_mcp_web_v3",
+        "mcp": "medical_graphrag.agents.agent_graphrag_mcp_v3",
+        "hybrid": "medical_graphrag.agents.agent_graphrag_hybride_v3_quality",
     }
-    script = CORE / names[args.mode]
-    if not script.is_file():
-        parser.error("Script manquant : " + str(script))
-    return subprocess.call([sys.executable, str(script), *rest], cwd=str(CORE))
+    env = os.environ.copy()
+    env["PYTHONPATH"] = str(SRC) + (os.pathsep + env["PYTHONPATH"] if env.get("PYTHONPATH") else "")
+    return subprocess.call([sys.executable, "-m", modules[args.mode], *rest], cwd=str(CORE), env=env)
 
 
 if __name__ == "__main__":

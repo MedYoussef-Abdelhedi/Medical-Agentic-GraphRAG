@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
-from generate_rag_eval_v3 import retrieve, make_context, verify_index, read_cases
-from score_ragas_v3_async import validate_input, mean_or_none
+from medical_graphrag.evaluation.generate_rag_eval_v3 import retrieve, make_context, verify_index, read_cases
+from medical_graphrag.evaluation.score_ragas_v3_async import validate_input, mean_or_none
 
 class EvaluationContractTests(unittest.TestCase):
     def setUp(self):
