@@ -53,7 +53,6 @@ Medical-Agentic-GraphRAG/
 ├── src/
 │   └── medical_graphrag/    # Agents, retrieval, Neo4j and MCP modules
 ├── tests/                  # Automated and regression tests
-├── scripts/archive/        # Historical maintenance scripts
 ├── .env.example            # Environment variable template, without secrets
 ├── .gitignore
 ├── run.py                  # Agent command-line launcher
